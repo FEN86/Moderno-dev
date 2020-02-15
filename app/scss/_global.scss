@@ -12,7 +12,7 @@ body {
 	font-weight: 400;
 	font-size: 15px;
 	line-height: 24px;
-	color: $color-text-darkness;
+	color: $color-text-darkness;	
 }
 a {
 	display: inline-block;
@@ -25,6 +25,9 @@ li {
   margin: 0;
   list-style: none;
 }
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+} 
 .wrapper {
 	position: relative;
 	overflow: hidden;
