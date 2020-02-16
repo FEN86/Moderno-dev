@@ -388,3 +388,44 @@
 }
 
 // end author
+// start tutorial
+
+.tutorial {
+  padding: 57px 0 120px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    margin-bottom: 46px;
+  }
+}
+.tutorial__item {
+  max-width: 370px;
+  width: 100%;   
+  &:hover {
+    .tutorial__item-img {
+      transform: scale(1.1);
+    }
+  }
+  &-img-wrap {
+    overflow: hidden;
+  }
+  &-img {
+    min-height: 270px;
+    @include bg;
+    transition: all .3s; 
+    overflow: hidden;   
+  }
+  &-text {
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 35px 15px;
+  }
+}
+
+// end tutorial
+// start tutorial
