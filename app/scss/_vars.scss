@@ -3,3 +3,9 @@ $color-text-light: #546e7a;
 $accent: #e74c3c;
 $accent2: #8bc34a;
 $bg: #f4f6f5;
+
+@mixin bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

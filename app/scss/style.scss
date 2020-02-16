@@ -75,9 +75,7 @@
 // start search
 
 .search {  
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  @include bg;
   min-height: 532px;
 }
 .search__inner {
@@ -177,9 +175,7 @@
   }
   &-img {
     min-height: 250px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    @include bg;
     display: block;
   }
   &-content {
@@ -230,9 +226,7 @@
       width: 30px;
       height: 30px;
       border-radius: 50%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;      
+      @include bg;      
       margin-right: 14px;
     }    
   }
@@ -274,9 +268,7 @@
     text-align: center;
     margin-top: 27px;   
     li {
-      display: inline-block;
-      // height: 16px;
-      // width: 16px;
+      display: inline-block;      
       margin: 0 3px;
       &.slick-active {
         button {
@@ -296,5 +288,65 @@
         outline: none;
       }
     }
+  }
+}
+
+// end product-slider
+// start advantages
+
+.advantages {
+  background-color: $color-text-darkness;  
+  padding: 108px 0 113px;
+  &__title {
+    color: #fff;
+    margin-bottom: 72px;
+  }
+}
+.advantages__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.advantages__item {
+  max-width: 370px;
+  text-align: center;
+  padding: 0 20px;  
+  &:hover {
+    .advantages__item-img {
+      background-color: $accent2;
+    }
+    .advantages__item-title {
+      color: $accent2;
+    }
+    .advantages__item-icon {
+      color: #fff;
+    }
+  }
+  &-img {
+    width: 114px;
+    height: 114px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 28px;
+    transition: all .3s;    
+  }
+  &-icon {
+    font-size: 60px;
+    line-height: 1;
+    color: #000;
+    transition: all .3s;    
+  }
+  &-title {
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  &-text {
+    font-size: 15px;
+    color: $color-text-light;
   }
 }
