@@ -6,6 +6,10 @@ html {
 *:before {
   box-sizing: inherit;
 }
+html,
+body {
+	height: 100%;
+}
 body {
 	font-size: 15px;
 	font-family: 'Roboto', sans-serif;
@@ -29,8 +33,20 @@ h1, h2, h3, h4, h5, h6, p {
 	margin: 0;
 } 
 .wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
 	position: relative;
 	overflow: hidden;
+}
+.content {
+	flex: 1 0 auto;
+}
+.footer {
+	flex: 0 0 auto;
+}
+.page-content {
+	background-color: $bg;
 }
 .container {
   max-width: 1200px;
@@ -57,4 +73,28 @@ h1, h2, h3, h4, h5, h6, p {
 .rate-star {
 	display: inline-block;
 	margin-right: 8px;
+}
+.breadcrumbs {
+	&__inner {
+		padding: 45px 0 40px;
+	}
+	&__item {
+		display: inline-block;
+		position: relative;		
+		&:not(:first-child) {
+			padding-left: 24px;
+			&::before {
+				content: '-';
+				position: absolute;
+				left: 9px;
+				color: $accent2;
+			}
+		}
+		&:last-child .breadcrumbs__link, span {
+			color: $color-text-darkness;
+		}
+	}
+	&__link {
+		color: #b0bec5;
+	}
 }
