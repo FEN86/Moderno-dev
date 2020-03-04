@@ -27,6 +27,308 @@
     color: inherit;
   }
 }
+.header__box {
+  display: flex;
+  align-items: center;
+  height: 100%;  
+}
+.header__circle-wrap + .header__circle-wrap {
+  margin-left: 15px;
+}
+.header__circle {
+  &.active {
+    display: block;
+  }
+  display: none;
+  width: 34px;
+  height: 34px;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  position: relative;  
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #a0a0a0;
+    font-size: 14px;    
+  }
+  span {
+    position: absolute;
+    right: -7px;
+    top: -7px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 18px;
+    font-size: 11px;
+    color: #fff;
+  }  
+}
+.notification {
+  span {
+    background-color: $accent4;
+  }
+}
+.message {
+  span {
+    background-color: $accent3;
+  }
+}
+.basket {
+  span {
+    background-color: $accent2;
+  }
+}
+.notification__wrap,
+.message__wrap,
+.basket__wrap {
+  position: relative;  
+  padding: 28px 0;
+}
+.notification__wrap,
+.message__wrap {
+  &:hover .circle__menu {
+    height: auto;
+    overflow: auto;    
+  }
+  &:hover .circle__item {
+    padding: 18px 60px 18px 21px;
+  }
+}
+.basket__wrap {    
+  &:hover .basket__menu {
+    height: auto;
+    overflow: auto;    
+  }
+  &:hover .basket__item {
+    padding: 19px 22px 22px;
+  }
+  &:hover .basket__total {
+    padding: 19px 16px 12px;
+  }
+}
+.notification__wrap,
+.message__wrap,
+.basket__wrap {
+  &:hover .header__circle::before {
+    color: $color-text-darkness;
+  }
+}
+.circle__menu,
+.basket__menu {
+  position: absolute;
+  top: 100%;
+  right: -14px;
+  height: 0;  
+  overflow: hidden;
+  z-index: 10;
+  transition: all .3s;   
+}
+.circle__item,
+.basket__item {
+  background-color: #fff;
+  border: 1px solid #d3d3d3;  
+  padding: 0 22px 0;
+  display: flex;
+  align-items: center;
+  width: 268px;
+  transition: all .3s;  
+  &:not(:first-child) {
+    border-top: none;
+  }
+}
+.basket__item  {
+  &:hover .basket__info-name{
+    text-decoration: underline;
+  }
+}
+.circle__item {
+  padding: 0 60px 0 21px;
+  position: relative;
+  &::before {
+    position: absolute;    
+    top: 28px;
+    right: 29px;
+    color: #b0bec5;
+    font-size: 16px;  
+  }
+  &.active {
+    &::before {
+      color: $accent4;
+    }
+  }  
+}
+.notification__wrap {
+  .circle__item {
+    &:hover .circle__info-theme{
+      text-decoration: underline;
+    }
+  }
+}
+.message__wrap {
+  .circle__item {
+    &:hover .circle__info-name{
+      text-decoration: underline;
+    }
+  }
+}
+.circle__img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.basket__img {
+  width: 73px;
+  height: 57px;
+  margin-right: 17px;
+}
+.circle__info {
+  font-family: 'Roboto', sans-serif;
+  line-height: 20px;
+  &-name {
+    font-size: 12px;
+    font-weight: 700;
+  }
+  &-theme {
+    font-size: 11px;
+    color: $accent2;
+  }
+  &-date {
+    font-size: 10px;
+    color: #707070;
+  }
+}  
+.basket__info {  
+  &-name {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  &-theme {
+    font-size: 12px;
+    color: $accent2;
+  }
+  &-price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+  }
+}
+.basket__total {
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+  border-top: none;
+  padding: 0 16px 0;
+  &-inner {
+    padding: 0 23px 0 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  &-links {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-link {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    padding: 9px 0 10px;
+    line-height: 1.2;
+    background-color: $accent2;
+    width: 105px;
+    &:hover {
+      background-color: rgba($color: $accent2, $alpha: 0.8);
+    }
+    &_checkout {
+      background-color: $accent;
+      width: 123px;
+      &:hover {
+        background-color: rgba($color: $accent, $alpha: 0.8);
+      }
+    }
+  }
+}
+.user__wrap {  
+  position: relative;  
+  padding: 21px 0;
+  margin-right: 25px;
+  margin-left: 20px; 
+  &:hover .user__menu {
+    height: auto;
+    overflow: auto;
+    border-width: 1px;
+    padding: 20px;
+  }  
+}
+.user {
+  padding-right: 20px;  ;
+  position: relative;
+  &:hover .user__name {
+    text-decoration: underline;
+  }
+  &::after {
+    content: '\f107';
+    position: absolute;
+    font-family: 'icomoon';
+    font-size: 16px;
+    color: #707070;
+    top: -1px;
+    right: 0;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+  &__img {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+  }
+  &__name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #222;
+  }
+  &__money {
+    font-size: 14px;
+    font-weight: 700;
+    color: $accent2;
+  }
+}
+.user__menu {
+  border: 0px solid #d3d3d3;
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  left: -2px;
+  padding: 0 20px;
+  width: 158px;
+  height: 0;
+  transition: all .3s;
+  overflow: hidden;
+  z-index: 10;   
+}
+.user__item {
+  &:not(:last-child) .user__link{
+    margin-bottom: 15px;
+  }
+}
+.user__link {
+  padding-left: 15px;  
+  font-size: 12px;
+  &:hover {
+    text-decoration: underline;
+  }  
+}
 .header__btn {
   padding: 4px;
   width: 72px;
@@ -39,10 +341,24 @@
     &:hover {
       background-color: rgba($color: $accent2, $alpha: 0.8);
     }
+    &_off {
+      display: none;
+    }
+  }
+  &-logout {
+    display: none;
+    background-color: $accent;
+    margin-left: 7px;
+    &.header__btn-login_on {
+      display: block;
+    }
+    &:hover {
+      background-color: rgba($color: $accent, $alpha: 0.8);
+    }
   }
   &-register {
     background-color: $accent;
-    margin: 7px;
+    margin-left: 7px;
     &:hover {
       background-color: rgba($color: $accent, $alpha: 0.8);
     }
@@ -959,22 +1275,5 @@
   }
 }
 
-
-.products__item-inner {  
-  
-}
-
-.products__item-content {
-
-}
-.products__item-info {
-
-}
-.products__item-title {
-
-}  
-.rate-star {
-  
-} 
 // end product-page__content
 // end product-page

@@ -103,3 +103,14 @@ h1, h2, h3, h4, h5, h6, p {
 		color: #b0bec5;
 	}
 }
+.angle-right {
+  position: relative;  
+  &:before {
+    content: "\f105";
+    position: absolute;
+    font-family: 'icomoon';
+    left: 0;
+    color: $accent2;
+    font-size: 14px;
+  }
+}
