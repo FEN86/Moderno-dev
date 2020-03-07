@@ -43,4 +43,12 @@ $(function () {
     $('.icon-th-large').addClass('active');
     $('.icon-th-list').removeClass('active');
   });
+
+  $('.mobile-menu').on('click', function () {
+    $('.menu').toggleClass('active');
+  });
+
+  $('.header__btn-menu').on('click', function () {
+    $('.header__box').toggleClass('active');
+  });
 });

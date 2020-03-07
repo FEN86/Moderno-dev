@@ -97,7 +97,8 @@
     padding: 18px 60px 18px 21px;
   }
 }
-.basket__wrap {    
+.basket__wrap {
+  margin-right: 20px;    
   &:hover .basket__menu {
     height: auto;
     overflow: auto;    
@@ -258,8 +259,7 @@
 .user__wrap {  
   position: relative;  
   padding: 21px 0;
-  margin-right: 25px;
-  margin-left: 20px; 
+  margin-right: 25px;   
   &:hover .user__menu {
     height: auto;
     overflow: auto;
@@ -384,6 +384,10 @@
       color: $accent;
     }   
   }
+}
+.header__btn-menu,
+.mobile-menu {
+  display: none;
 }
 
 // end header
@@ -1277,3 +1281,12 @@
 
 // end product-page__content
 // end product-page
+
+
+
+
+
+
+
+
+@import 'media';
