@@ -104,7 +104,8 @@ h1, h2, h3, h4, h5, h6, p {
 	}
 }
 .angle-right {
-  position: relative;  
+  position: relative;
+  padding: 0 19px;  
   &:before {
     content: "\f105";
     position: absolute;
