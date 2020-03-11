@@ -391,6 +391,124 @@
 }
 
 // end header
+// start modal
+
+#modal {
+  position: relative;
+  background-color: $accent2;
+  max-width: 730px;
+  width: 100%;
+  padding-top: 86px;
+  padding-bottom: 110px;
+  &::before {
+    content: "\f00d";
+    position: absolute;
+    top: 9px;
+    right: 14px;
+    font-size: 18px;
+    font-family: 'icomoon';
+    color: #fff;    
+  }
+  .login__title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 36px;
+  }
+  .login__form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .login__textfield {
+    position: relative;
+    display: block;
+    &::before {
+      position: absolute;
+      font-size: 14px;
+      font-family: 'icomoon';
+      color: #fff;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 18px;
+    }
+    &-name {
+      &::before {
+        content: "\f007";
+      }      
+    }
+    &-pass {
+      &::before {
+        content: "\f023";
+      } 
+    }
+  }
+  .login__input {
+    height: 43px;
+    border: none;
+    font-size: 14px;
+    color: #fff;
+    padding: 0 41px;
+    background-color: #76ae36;
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+    &::placeholder {      
+      color: #fff;
+    }
+    
+  }
+  .login__btn-box {
+    margin-top: 19px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .login__btn {
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 17px 10px 15px;
+    width: 139px;
+    background-color: #fff;
+    box-shadow: 0 2px 2px 0px rgba(118, 174, 54, 0.75);
+    cursor: pointer;
+  }
+  .login__btn-create {
+    width: 250px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background-color: #76ae36;
+    padding: 16px 10px 14px;
+    text-align: center;
+    &::before {
+      font-family: 'icomoon';
+      padding-right: 12px;
+      vertical-align: middle;
+    }
+  }
+  .login__link-lost {
+    font-size: 18px;
+    color: #fff;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .fancybox-button svg path {
+    fill: #fff;
+    z-index: 1;
+    opacity: 0;
+  }
+}
+  
+
+// end modal
 // start search
 
 .search {  
