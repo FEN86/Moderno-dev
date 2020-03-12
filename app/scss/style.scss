@@ -199,7 +199,7 @@
   }
   &-date {
     font-size: 10px;
-    color: #707070;
+    color: $accent5;
   }
 }  
 .basket__info {  
@@ -278,7 +278,7 @@
     position: absolute;
     font-family: 'icomoon';
     font-size: 16px;
-    color: #707070;
+    color: $accent5;
     top: -1px;
     right: 0;
   }
@@ -1278,7 +1278,7 @@
 }
 .product-page__filter-sort {
   font-size: 14px;
-  color: #707070;
+  color: $accent5;
   display: flex;
   align-items: center;
   .icon-sort-amount-desc {
@@ -1287,7 +1287,7 @@
   }
   .icon-unsorted {
     font-size: 14px;
-    color: #707070;
+    color: $accent5;
   }
 }
 .pagination__item {
@@ -1431,7 +1431,7 @@
 }
 .product-one__text {
   font-size: 16px;
-  color: #707070;
+  color: $accent5;
   margin-bottom: 44px;
 }
 .product-one__box {
@@ -1595,7 +1595,7 @@
   }
   .tab-item__list {
     font-size: 16px;
-    color: #707070;
+    color: $accent5;
     line-height: 36px;
     column-count: 2;
   }
@@ -1678,11 +1678,11 @@
   &-link {
       border: 1px solid #d3d3d3;
       font-size: 13px;
-      color: #707070;
+      color: $accent5;
       line-height: 20px;
       padding: 3px 10px;      
       &:hover {
-        border-color: #707070;
+        border-color: $accent5;
       }
   }
 }
@@ -1729,7 +1729,7 @@
     font-weight: 700;
     font-family: 'Roboto', sans-serif;
     span {
-      color: #707070;
+      color: $accent5;
       font-size: 16px;
       font-weight: 300;
       margin-left: 15px;        
@@ -1830,7 +1830,7 @@
     background-color: #fff;
     margin-bottom: 144px;
   }
-  &__title {
+  &__head {
     font-size: 24px;
     line-height: 32px;
     font-weight: 500;    
@@ -1851,12 +1851,150 @@
     }
     &-text {
       font-size: 15px;
-      color: #707070;
+      color: $accent5;
     }
   }
 }
 
 // end about page
+
+// start page contact
+
+.page-contact {
+  &__inner {
+    border: 1px solid #dcdcdc;
+    background-color: #fff;
+    margin-bottom: 144px;
+  }
+  &__head {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;    
+    padding: 24px 38px;    
+    border-bottom: 1px solid #dcdcdc;
+  }
+  &__content {
+    padding: 32px 39px 14px;
+  }
+}
+.page-contact__map {
+  margin-bottom: 62px;
+  iframe {
+    min-height: 414px;
+    width: 100%;
+  }
+}
+.page-contact__box {
+  display: flex;
+  justify-content: space-between;
+}
+.page-contact__info {
+  max-width: 330px;
+  width: 100%;
+}
+.page-contact__item {
+  margin-bottom: 35px;
+}
+.page-contact__form-wrap {
+  max-width: 726px;
+  width: 100%;
+}
+.page-contact__title {
+  font-size: 20px;  
+  font-weight: 500;
+  padding-left: 40px;  
+  padding-bottom: 24px;
+  margin-bottom: 26px;
+  position: relative;
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;    
+    font-size: 24px;
+    font-family: 'icomoon';
+    color: $accent2;
+  }
+  &-local {
+    &::before {
+      content: "\f041";
+    }
+  }
+  &-phone {
+    &::before {
+      content: "\f095";
+    }
+  }
+  &-mail {
+    &::before {
+      content: "\f003";
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+    height: 4px;
+    width: 44px;
+    background-color: $accent2;
+  }
+}
+.page-contact__text,
+.page-contact__phone,
+.page-contact__mail {
+  font-size: 15px;
+  color: $accent5;
+  max-width: 230px;
+  margin-left: 40px;
+}
+.page-contact__form-title {
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 22px;
+}
+.page-contact__form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+.page-contact__form-input {
+  border: none;
+  max-width: 351px;
+  width: 100%;
+  height: 43px;
+  background-color: #f1f4f5;
+  padding: 0 17px;  
+  &::placeholder {
+    font-size: 15px;
+    color: #7a7a7a;
+  }
+}
+.page-contact__form-textarea {
+  border: none;
+  width: 100%;
+  min-height: 193px;
+  background-color: #f1f4f5;
+  padding: 17px;
+  resize: none;
+  margin-bottom: 22px;
+  &::placeholder {
+    font-size: 15px;
+    color: #7a7a7a;
+  }
+}
+.page-contact__form-btn {
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 19px 36px 17px;
+  background-color: $accent2;
+  cursor: pointer;
+}
+
+// end page contact
 
 
 
