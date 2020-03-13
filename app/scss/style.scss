@@ -1586,18 +1586,18 @@
     border: 1px solid #dcdcdc;
     border-top: none;
     padding: 37px 35px 64px;
-  }
-  .tab-item {
-    display: none;
-    &:first-child {
-      display: block;
-    }
-  }
+  }  
   .tab-item__list {
     font-size: 16px;
     color: $accent5;
     line-height: 36px;
     column-count: 2;
+  }
+}
+.tab-item {
+  display: none;
+  &:first-child {
+    display: block;
   }
 }
 .aside__item {
@@ -1947,6 +1947,12 @@
   max-width: 230px;
   margin-left: 40px;
 }
+.page-contact__phone,
+.page-contact__mail {
+  &:hover {
+    text-decoration: underline;
+  }
+}
 .page-contact__form-title {
   font-size: 24px;
   font-weight: 500;
@@ -1995,6 +2001,101 @@
 }
 
 // end page contact
+
+// start settings
+
+.settings__tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 152px;
+  .tabs {
+    max-width: 270px;
+    width: 100%;
+    margin-right: 30px;    
+    .tab {
+      background-color: #fff;
+      border: 1px solid #dcdcdc;
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      color: $accent5;
+      padding: 14px 50px 12px;
+      position: relative;
+      cursor: pointer;
+      &:not(:first-child) {
+        border-top: none;
+      }
+      &::before {
+        content: "\f105";
+        font-family: 'icomoon';
+        position: absolute;
+        font-size: 14px;
+        left: 22px;
+        top: 12px;
+      }
+      &.active {
+        border-bottom: 2px solid $accent2;
+        color: #37474f;
+        &::before {
+          color: $accent2;          
+        }
+      }
+    }
+  }
+  .tab_content {
+    max-width: 870px;
+    width: 100%;    
+  }
+}
+.page-box {
+  background-color: #fff;
+  border: 1px solid #dcdcdc;
+  &__head {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+    padding: 17px 34px 16px;
+    border-bottom: 1px solid #dcdcdc;
+  }
+  &__content {
+    padding: 33px 38px 79px;
+  }
+}
+.settings__form {
+  &-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 21px;
+  }
+  &-label {
+    max-width: 200px;
+    width: 100%;
+    color: #444;
+    margin-right: 30px;
+  }
+  &-input, &-select {
+    max-width: 540px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #dcdcdc;
+    background-color: #f9f9f9;
+    padding: 0 16px;
+    &::placeholder {
+      color: $accent5;
+    }
+  }
+  &-btn {
+    border: none;
+    background-color: $accent2;
+    color: #fff;
+    padding: 14px 31px 15px;
+    cursor: pointer;
+  }
+}
+
+
+// end settings
 
 
 
