@@ -8,6 +8,8 @@ $(function () {
     readOnly: true
   });
 
+  $('input[type="file"], select').styler();
+
   // mixitup
   // var mixer = mixitup('.products__inner-box');
   var mixer = $('.products__inner-box').length ? mixitup('.products__inner-box') : false;
@@ -63,4 +65,8 @@ $(function () {
     $('#' + id).addClass('active-tab').fadeIn();
     return false;
   });
+
+
+
+
 });
