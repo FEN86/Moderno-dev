@@ -1,0 +1,14 @@
+$color-text-darkness: #263238;
+$color-text-light: #546e7a;
+$accent: #e74c3c;
+$accent2: #8bc34a;
+$accent3: #ef6c00;
+$accent4: #fcb322;
+$accent5: #707070;
+$bg: #f4f6f5;
+
+@mixin bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
