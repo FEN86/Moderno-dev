@@ -581,6 +581,11 @@
   padding: 107px 0 110px;
   background-color: $bg;
 }
+.products__wrapper,
+.product-slider__wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
 .products__inner-controls {
   text-align: center;
   margin-bottom: 60px;
@@ -607,13 +612,14 @@
 .products__inner-box {
   display: flex; 
   flex-wrap: wrap;
-  margin: 0 -13px 46px;  
+  margin: 0 -15px 46px;  
 }
 .products__item {
-  max-width: 467px;
-  width: 100%;
-  padding: 0 13px;
-  margin-bottom: 31px;
+  // max-width: 467px;
+  // width: 100%;
+  // padding: 0 13px;
+  flex-basis: calc(25% - 30px);
+  margin: 0 15px 31px;
   &-inner {    
     width: 100%;  
     box-shadow: 0 1px 2px 0px rgba(205, 214, 222, 0.75); 
@@ -697,6 +703,30 @@
     span {
       color: $color-text-darkness;
     }
+  }
+}
+.product-trigon {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 64px;
+    height: 64px;
+    border-top: 32px solid $accent2;
+    border-left: 32px solid $accent2;
+    border-right: 32px solid transparent;
+    border-bottom: 32px solid transparent;
+  }
+  &::after {
+    content: '\f0e7';
+    position: absolute;
+    top: 8px;
+    left: 14px;
+    font-family: 'icomoon';
+    font-size: 18px;
+    color: #fff;
   }
 }
 .products__bottom-controls {
@@ -853,15 +883,16 @@
   padding: 57px 0 120px;
   &__inner {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;    
+    margin: 0 -15px;
   }
   &__title {
     margin-bottom: 46px;
   }
 }
 .tutorial__item {
-  max-width: 370px;
-  width: 100%;   
+  flex-basis: calc( 33.333% - 30px);  
+  margin: 0 15px;   
   &:hover {
     .tutorial__item-img {
       transform: scale(1.1);
@@ -1233,8 +1264,11 @@
 .product-page__content {
   width: 100%;
   .products__item {
-    max-width: 300px;    
-    padding: 0 15px;
+    // max-width: 300px;    
+    // padding: 0 15px;
+    // max-width: 100%;
+    flex-basis: calc(33.3333% - 30px);
+    margin: 0 15px 31px;
     transition: all .3s;        
   }
   .products__item-inner {  
@@ -1351,7 +1385,7 @@
 .product-page__content {
   .products__item {
     &.list {
-      max-width: 100%;
+      flex-basis: 100%;
       .products__item-content {
         padding-top: 20px;
         padding-bottom: 4px;  
@@ -1399,11 +1433,13 @@
 // end product-page__content
 // end product-page
 // start product-one
+
 .product-one__one {
   padding-bottom: 95px;
 }
 .product-one__inner {
   display: flex;
+  margin-bottom: 123px;
 }
 .product-one__content {
   margin-right: 30px;
@@ -1530,7 +1566,8 @@
   margin: 0 -15px;
 }
 .product-mini {
-  display: flex;  
+  display: flex;
+  background-color: #fff;
   box-shadow: 0 1px 2px 0px rgba(205, 214, 222, 0.75);
   margin: 0 15px 28px;
   width: 100%;
@@ -1545,7 +1582,6 @@
   }
   &__info {
     padding: 10px 21px 8px 21px;
-    background-color: #fff;
     &-name {
       font-size: 14px;
       font-weight: 500;
@@ -1618,6 +1654,48 @@
   font-weight: 500;
   color: $accent;
   line-height: 40px;
+  margin-right: 15px;
+}
+.price__select-form {
+  .jq-selectbox {
+    min-width: 82px;    
+    width: 100%;
+  }
+  .jq-selectbox__select {    
+    height: 27px;
+    padding: 0 22px 0 10px;
+    border: 1px solid #dcdcdc;  
+    border-radius: 0px;
+    background: #f9f9f9;
+    box-shadow: none;
+    font: 13px/25px 'Roboto', sans-serif;    
+    color: #70838d;
+    text-shadow: none;
+  }
+  .jq-selectbox__select-text {
+    width: 100% !important;
+    color: #70838d;
+  }
+  .jq-selectbox__trigger {   
+    border-left: none;
+    position: absolute;    
+    width: 20px;
+    height: 100%; 
+  }
+  .jq-selectbox__trigger-arrow {
+    border: none;
+    top: 0;
+    right: 17px;
+    &::after {
+      content: "\f0d7";
+      font-family: 'icomoon';
+      color: $accent2;
+    }
+  }
+  .jq-selectbox__dropdown {
+    top: 27px!important;
+    margin: 2px 0 2px;
+  }
 }
 .price__btn {
   font-size: 16px;
@@ -1780,7 +1858,7 @@
     text-align: center;
     color: #fff;
     background-color: $accent2;
-    padding: 75px 0 101px;
+    padding: 75px 20px 101px;
   }
   &__title {
     font-size: 300px;
@@ -1978,6 +2056,9 @@
     font-size: 15px;
     color: #7a7a7a;
   }
+  & + & {
+    margin-left: 25px;
+  }
 }
 .page-contact__form-textarea {
   border: none;
@@ -2072,10 +2153,10 @@
     margin-bottom: 21px;
   }
   &-label {
-    max-width: 200px;
+    max-width: 254px;
     width: 100%;
     color: #444;
-    margin-right: 30px;
+    padding-right: 20px;
   }
   &-input, &-select {
     max-width: 540px;
@@ -2096,6 +2177,42 @@
     cursor: pointer;
     margin-left: 253px;
   }
+  .jq-selectbox {
+    max-width: 540px;
+    width: 100%;
+  }
+  .jq-selectbox__select {    
+    height: 40px;
+    padding: 0 45px 0 17px;
+    border: 1px solid #dcdcdc;  
+    border-radius: 0px;
+    background: #f9f9f9;
+    box-shadow: none;
+    font: 15px/38px 'Roboto', sans-serif;
+    color: $color-text-darkness;
+    text-shadow: none;
+  }
+  .jq-selectbox__select-text {
+    width: 100% !important;
+    color: $accent5;
+  }
+  .jq-selectbox__trigger {   
+    border-left: none;
+  }
+  .jq-selectbox__trigger-arrow {
+    border: none;
+    top: 0;
+    right: 19px;
+    &::after {
+      content: "\f0d7";
+      font-family: 'icomoon';
+      color: #444;
+    }
+  }
+  .jq-selectbox__dropdown {
+    top: 40px!important;
+    margin: 2px 0 2px;
+  }
 }
 
 // end settings page
@@ -2104,7 +2221,6 @@
 
 .profile__inner {
   display: flex;
-  
 }
 .profile__aside {
   max-width: 270px;
@@ -2364,7 +2480,8 @@
 }
 .upload-form__label {
   color: #444;
-  max-width: 150px;
+  max-width: 158px;
+  width: 100%;
   margin-right: 20px;
   span {
     color: $accent2;    
@@ -2487,7 +2604,10 @@
 }
 .withdrawals__col {
   max-width: 570px;
-  width: 100%;  
+  width: 100%;
+  & + & {
+    margin-left: 30px;
+  } 
 }
 .withdrawals__box {
   background-color: #fff;
@@ -2584,21 +2704,25 @@
     background-color: #f9f9f9;
   }
   &-date {
-    width: 157px;
+    max-width: 157px;
+    width: 100%;
     padding-left: 21px;
     padding-right: 20px;
   }
   &-email {
-    width: 178px;
+    max-width: 178px;
+    width: 100%;
     padding-right: 20px;
   }
   &-price {
-    width: 72px;
+    max-width: 72px;
+    width: 100%;
     padding-right: 20px;
     font-weight: 700;
   }
   &-status {
-    width: 85px;
+    max-width: 85px;
+    width: 100%;
     padding-right: 20px;
     font-weight: 700;    
     &.withdrawals__item-status_paid {
